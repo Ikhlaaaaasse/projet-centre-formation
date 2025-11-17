@@ -2,6 +2,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.state.Session;
+
 public class Formation {
     private int idFormation;
     private String titre;
