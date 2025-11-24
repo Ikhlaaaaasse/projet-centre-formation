@@ -1,9 +1,11 @@
-package model;
+package com.centreformation.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Apprenant {
+import com.centreformation.model.observer.Observateur;
+
+public class Apprenant implements Observateur {
 
     private int idApprenant;
     private String nom;
@@ -24,5 +26,29 @@ public class Apprenant {
         }
     }
 
-    // Getters & Setters
+    @Override
+    public void update(String message) {
+        // Pour l’instant on log en console, plus tard UI / email
+        System.out.println("Notification pour " + nom + " " + prenom + " : " + message);
+    }
+
+    public int getIdApprenant() {
+        return idApprenant;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public List<Formation> getHistorique() {
+        return historique;
+    }
 }

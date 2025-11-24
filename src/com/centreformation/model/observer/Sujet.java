@@ -1,5 +1,7 @@
 package com.centreformation.model.observer;
 
-public class Sujet {
-    
+public interface Sujet {
+    void ajouterObservateur(Observateur o);
+    void retirerObservateur(Observateur o);
+    void notifierObservateurs(String message);
 }

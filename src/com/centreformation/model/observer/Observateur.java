@@ -1,5 +1,5 @@
 package com.centreformation.model.observer;
 
-public class Observateur {
-    
+public interface Observateur {
+    void update(String message);
 }
